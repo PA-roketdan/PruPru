@@ -6,6 +6,7 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Base64
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.AuthFailureError
@@ -30,6 +31,12 @@ class CameraActivity : AppCompatActivity() {
                 var imgName: String? = uploadImage2Server()
             }
         }
+
+        var Img_home= this.findViewById<ImageButton>(R.id.Img_home)
+        Img_home.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private var REQUEST_IMAGE_CAPTURE = 1000; // do not change
@@ -48,7 +55,7 @@ class CameraActivity : AppCompatActivity() {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             if (data?.extras?.get("data") != null) {
                 val imageBitmap = data?.extras?.get("data") as Bitmap
-                imagePreview.setImageBitmap(imageBitmap)
+                Img_trash.setImageBitmap(imageBitmap)
                 this.image = imageBitmap
             } else {
                 Toast.makeText(applicationContext, "기본 카메라를 사용해주세요.", Toast.LENGTH_LONG).show()
@@ -83,7 +90,7 @@ class CameraActivity : AppCompatActivity() {
                     var r: CameraRequest = CameraRequest()
 
                     var result = r.execute(image_name).get() // image bitmap
-                    imagePreview.setImageBitmap(result)
+                    Img_trash.setImageBitmap(result)
                     println("Reqeust successfully received!")
                 }
             },

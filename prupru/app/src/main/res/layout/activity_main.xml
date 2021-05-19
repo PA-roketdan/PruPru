@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="168dp"
-        android:layout_marginRight="168dp"
         android:layout_marginBottom="504dp"
         android:text="메뉴를 \n선택해주세요."
         android:textColor="#14D2A5"
@@ -28,18 +28,16 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="77dp"
-        android:layout_marginRight="77dp"
         android:layout_marginBottom="456dp"
         android:text="분리수거는 분리수거를,\n사용자 정보 및 설정은 설정 메뉴를 선택하세요."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.747" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.037" />
 
     <TextView
         android:id="@+id/textView3"
@@ -77,36 +75,36 @@
 
     <ImageButton
         android:id="@+id/CameraButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginStart="89dp"
-        android:layout_marginLeft="89dp"
         android:layout_marginTop="94dp"
         android:layout_marginEnd="191dp"
-        android:layout_marginRight="191dp"
         android:layout_marginBottom="292dp"
+        android:background="#02FFFFFF"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
+        app:srcCompat="@drawable/camerbutton" />
 
     <ImageButton
         android:id="@+id/SettingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginStart="22dp"
-        android:layout_marginLeft="22dp"
         android:layout_marginTop="94dp"
         android:layout_marginEnd="89dp"
-        android:layout_marginRight="89dp"
         android:layout_marginBottom="292dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/CameraButton"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_constraintVertical_bias="0.516"
-        app:srcCompat="@android:drawable/ic_dialog_info" />
+        app:srcCompat="@drawable/settingbutton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

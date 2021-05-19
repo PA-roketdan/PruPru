@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".StartActivity">
 
     <EditText
@@ -11,15 +12,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
         android:layout_marginTop="315dp"
         android:layout_marginEnd="55dp"
-        android:layout_marginRight="55dp"
         android:layout_marginBottom="325dp"
         android:width="250dp"
+        android:backgroundTint="#000000"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:textColorHint="#A8A5A5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,15 +32,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
         android:layout_marginTop="41dp"
         android:layout_marginEnd="55dp"
-        android:layout_marginRight="55dp"
         android:layout_marginBottom="284dp"
         android:width="250dp"
+        android:backgroundTint="@color/black"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:textColorHint="#A8A5A5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,26 +68,45 @@
 
     <ImageButton
         android:id="@+id/kakao_login_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
         android:background="@android:color/transparent"
         android:src="@drawable/kakao_login"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.378"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SignButton"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintVertical_bias="0.076" />
 
     <com.facebook.login.widget.LoginButton
-        android:id="@+id/facebook_login_button"
-        android:text="페이스북"
+        android:id="@+id/facebook_login_button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:text="페이스북"
         app:layout_constraintBottom_toTopOf="@+id/Email"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.717" />
+
+    <ImageButton
+        android:id="@+id/facebook_login_button"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="129dp"
+        android:layout_marginBottom="147dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/kakao_login_button"
+        app:layout_constraintTop_toBottomOf="@+id/SignButton"
+        app:layout_constraintVertical_bias="0.388"
+        app:srcCompat="@drawable/facebook_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
