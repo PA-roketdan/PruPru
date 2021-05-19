@@ -78,4 +78,15 @@
         app:layout_constraintTop_toBottomOf="@+id/SignButton"
         app:layout_constraintVertical_bias="0.185" />
 
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/facebook_login_button"
+        android:text="페이스북"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,11 +7,19 @@ import android.util.Log
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.login.LoginManager
+import com.facebook.login.LoginResult
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.util.Utility
 import com.kakao.sdk.user.UserApiClient
+import java.util.*
 
 class StartActivity : AppCompatActivity() {
+    var callbackManager: CallbackManager? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
@@ -46,5 +54,40 @@ class StartActivity : AppCompatActivity() {
                 UserApiClient.instance.loginWithKakaoAccount(this, callback = callback)
             }
         }
+
+        var facebook_login_button= this.findViewById<Button>(R.id.facebook_login_button)
+
+        callbackManager = CallbackManager.Factory.create()
+        facebook_login_button.setOnClickListener {
+            facebookLogin()
+        }
+
     }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        callbackManager?.onActivityResult(requestCode, resultCode, data)
+    }
+
+    fun facebookLogin() {
+        LoginManager.getInstance()
+            .logInWithReadPermissions(this,
+                Arrays.asList("public_profile", "email", "user_friends")
+            )
+
+        LoginManager.getInstance()
+            .registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
+                override fun onSuccess(result: LoginResult?) {
+                    //  handleFacebookAccessToken(result?.accessToken)
+                    Toast.makeText(applicationContext, "로그인 성공", Toast.LENGTH_SHORT).show()
+
+                }
+                override fun onCancel() {
+                   // Toast.makeText(applicationContext, "로그인 취소", Toast.LENGTH_SHORT).show()
+                }
+                override fun onError(error: FacebookException?) {
+                    Toast.makeText(applicationContext, "로그인 실패" + error, Toast.LENGTH_SHORT).show()
+                }
+            })
+    }
+
 }
