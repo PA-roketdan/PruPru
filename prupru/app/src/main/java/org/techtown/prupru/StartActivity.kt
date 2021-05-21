@@ -55,7 +55,7 @@ class StartActivity : AppCompatActivity() {
             }
         }
 
-        var facebook_login_button= this.findViewById<Button>(R.id.facebook_login_button)
+        var facebook_login_button= this.findViewById<ImageButton>(R.id.facebook_login_button)
 
         callbackManager = CallbackManager.Factory.create()
         facebook_login_button.setOnClickListener {
