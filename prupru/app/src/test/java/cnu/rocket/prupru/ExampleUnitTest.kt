@@ -1,4 +1,4 @@
-package org.techtown.prupru
+package cnu.rocket.prupru
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package org.techtown.prupru
+package cnu.rocket.prupru
 
 import android.content.Intent
 import android.graphics.Bitmap

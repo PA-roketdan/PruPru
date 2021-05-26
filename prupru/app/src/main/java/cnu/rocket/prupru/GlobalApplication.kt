@@ -1,4 +1,4 @@
-package org.techtown.prupru
+package cnu.rocket.prupru
 
 import android.app.Application
 import com.kakao.sdk.common.KakaoSdk

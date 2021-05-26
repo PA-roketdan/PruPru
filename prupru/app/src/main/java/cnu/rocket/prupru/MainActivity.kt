@@ -1,4 +1,4 @@
-package org.techtown.prupru
+package cnu.rocket.prupru
 
 import android.Manifest
 import android.content.Intent
@@ -10,6 +10,7 @@ import android.widget.ImageButton
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+
 
 
 class MainActivity : AppCompatActivity() {

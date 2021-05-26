@@ -1,4 +1,4 @@
-package org.techtown.prupru
+package cnu.rocket.prupru
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,7 @@ class ReasultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reasult)
+
 
         var Img_home= this.findViewById<ImageButton>(R.id.Img_home)
         Img_home.setOnClickListener {

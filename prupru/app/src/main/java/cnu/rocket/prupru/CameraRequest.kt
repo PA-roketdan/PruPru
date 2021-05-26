@@ -1,4 +1,4 @@
-package org.techtown.prupru
+package cnu.rocket.prupru
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
