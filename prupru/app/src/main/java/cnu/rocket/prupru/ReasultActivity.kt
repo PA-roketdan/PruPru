@@ -11,7 +11,7 @@ class ReasultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_reasult)
 
 
-        var Img_home= this.findViewById<ImageButton>(R.id.Img_home)
+        var Img_home= this.findViewById<ImageButton>(R.id.img_home)
         Img_home.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

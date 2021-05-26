@@ -12,7 +12,7 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
-        android:name="cnu.rocket.prupru.GlobalApplication"
+        android:name=".GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="푸릇푸릇"
@@ -20,9 +20,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name="cnu.rocket.prupru.ReasultActivity"></activity>
-        <activity android:name="cnu.rocket.prupru.SearchActivity" />
-        <activity android:name="cnu.rocket.prupru.ReasultActivity3" />
+        <activity android:name=".SettingActivity"></activity>
+        <activity android:name=".ReasultActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".ReasultActivity3" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -44,9 +45,9 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name="cnu.rocket.prupru.CameraActivity" />
-        <activity android:name="cnu.rocket.prupru.MainActivity" />
-        <activity android:name="cnu.rocket.prupru.StartActivity">
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

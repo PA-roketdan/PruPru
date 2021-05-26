@@ -29,6 +29,12 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        var SettingButton=this.findViewById<ImageButton>(R.id.SettingButton)
+        SettingButton.setOnClickListener {
+            val intent = Intent(this, SettingActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private val PERMISSIONS_REQUEST_CODE = 1000; // do not change
