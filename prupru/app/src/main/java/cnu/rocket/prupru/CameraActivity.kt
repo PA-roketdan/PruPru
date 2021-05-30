@@ -82,15 +82,16 @@ class CameraActivity : AppCompatActivity() {
 
         var requestQueue: RequestQueue = Volley.newRequestQueue(this)
 
+
         var url: String = "http://{server_address}/send2Server.php"
         val request: StringRequest = object : StringRequest(Method.POST, url,
             Response.Listener { response ->
                 println(response)
                 if (response != null){
-                    var r: CameraRequest = CameraRequest()
-
-                    var result = r.execute(image_name).get() // image bitmap
-                    Img_trash.setImageBitmap(result)
+                    val intent = Intent(this, ResultActivity::class.java)
+                    intent.putExtra("result",response)
+                    intent.putExtra("image_name",image_name)
+                    startActivity(intent)
                     println("Reqeust successfully received!")
                 }
             },
