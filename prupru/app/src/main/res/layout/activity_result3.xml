@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context="cnu.rocket.prupru.ReasultActivity3">
+    tools:context="cnu.rocket.prupru.ResultActivity3">
 
     <ImageButton
         android:id="@+id/Img_home"

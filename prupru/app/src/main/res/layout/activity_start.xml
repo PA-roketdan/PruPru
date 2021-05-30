@@ -78,19 +78,19 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SignButton"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintVertical_bias="0.694" />
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/facebook_login_button"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="129dp"
         android:layout_marginBottom="147dp"
         app:com_facebook_login_text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintHorizontal_bias="0.288"
         app:layout_constraintStart_toEndOf="@+id/kakao_login_button"
         app:layout_constraintTop_toBottomOf="@+id/SignButton"
         app:layout_constraintVertical_bias="0.659" />

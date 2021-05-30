@@ -20,10 +20,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SettingActivity"></activity>
-        <activity android:name=".ReasultActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".ResultActivity" />
         <activity android:name=".SearchActivity" />
-        <activity android:name=".ReasultActivity3" />
+        <activity android:name=".ResultActivity3" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
