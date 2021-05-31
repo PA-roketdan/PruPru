@@ -35,6 +35,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SettingActivity::class.java)
             startActivity(intent)
         }
+
+        var SearchButton=this.findViewById<ImageButton>(R.id.SearchButton)
+        SearchButton.setOnClickListener{
+            val intent=Intent(this,SearchActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private val PERMISSIONS_REQUEST_CODE = 1000; // do not change

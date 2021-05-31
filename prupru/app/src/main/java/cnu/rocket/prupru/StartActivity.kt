@@ -10,7 +10,6 @@ import android.widget.Toast
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
-import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.common.util.Utility
@@ -19,7 +18,6 @@ import java.util.*
 
 import com.facebook.AccessToken
 import com.facebook.login.widget.LoginButton
-import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -31,6 +29,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.shobhitpuri.custombuttons.GoogleSignInButton
 
 class StartActivity : AppCompatActivity() {
     var callbackManager: CallbackManager? = null
@@ -83,8 +82,7 @@ class StartActivity : AppCompatActivity() {
             .build();
 
         googleSigneInClient=GoogleSignIn.getClient(this,gso)
-        var google_login_button: SignInButton =this.findViewById(R.id.google_login_button)
-
+        var google_login_button: GoogleSignInButton =this.findViewById(R.id.google_login_button)
         google_login_button.setOnClickListener {
             signIn()
         }

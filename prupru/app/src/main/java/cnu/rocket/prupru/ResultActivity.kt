@@ -55,7 +55,6 @@ class ResultActivity : AppCompatActivity() {
             val temp = tmp[i].split(":")
             val toProb: Float = (temp[1].toFloat() * 10000).roundToInt() / 100f
             results[i] = temp[0] + ":  " + toProb.toString()+"%"
-
         }
         return results
     }

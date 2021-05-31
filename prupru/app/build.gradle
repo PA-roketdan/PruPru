@@ -43,6 +43,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx'
     // Also declare the dependency for the Google Play services library and specify its version
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.shobhitpuri.custombuttons:google-signin:1.1.0'
 
 
     implementation "com.kakao.sdk:v2-user:2.5.0"
