@@ -26,10 +26,17 @@ class CameraActivity : AppCompatActivity() {
 
         pictureIntent()
 
+        var btnSend=this.findViewById<ImageButton>(R.id.btnSend)
         btnSend.setOnClickListener { // send 버튼 누르면 서버로 보내기
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
                 var imgName: String? = uploadImage2Server()
             }
+        }
+
+        var btn_recaptrue=this.findViewById<ImageButton>(R.id.btn_recaptrue)
+        btn_recaptrue.setOnClickListener{
+            val intent = Intent(this, CameraActivity::class.java)
+            startActivity(intent)
         }
 
         var Img_home= this.findViewById<ImageButton>(R.id.Img_home)

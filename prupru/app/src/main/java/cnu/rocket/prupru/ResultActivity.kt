@@ -3,9 +3,12 @@ package cnu.rocket.prupru
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import kotlin.math.roundToInt
 
 class ResultActivity : AppCompatActivity() {
@@ -13,6 +16,12 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
 
+        var view2= this.findViewById<ConstraintLayout>(R.id.view2)
+        var titletext1=this.findViewById<TextView>(R.id.textView8)
+        var titletext2=this.findViewById<TextView>(R.id.textView10)
+        view2.setVisibility(View.INVISIBLE)
+        titletext1.setVisibility(View.INVISIBLE)
+        titletext2.setVisibility(View.INVISIBLE)
 
         var Img_home= this.findViewById<ImageButton>(R.id.img_home)
         Img_home.setOnClickListener {
@@ -49,6 +58,8 @@ class ResultActivity : AppCompatActivity() {
                 if (result_array != null) {
                     if(result_array.first[0] == "plastic"){
                         pagechange()
+                    }else{
+                        pageresult(EngtoKoMap[result_array.first[0]],result_array.first[0] )
                     }
                 }
             }
@@ -56,6 +67,8 @@ class ResultActivity : AppCompatActivity() {
                 if (result_array != null) {
                     if(result_array.first[1]=="plastic"){
                         pagechange()
+                    }else{
+                        pageresult(EngtoKoMap[result_array.first[1]],result_array.first[1])
                     }
                 }
             }
@@ -63,6 +76,8 @@ class ResultActivity : AppCompatActivity() {
                 if (result_array != null) {
                     if(result_array.first[2]=="plastic"){
                         pagechange()
+                    }else{
+                        pageresult(EngtoKoMap[result_array.first[2]],result_array.first[2])
                     }
                 }
             }
@@ -83,21 +98,23 @@ class ResultActivity : AppCompatActivity() {
     }
 
     private fun pagechange(){
-        val intent = Intent(this, ResultActivity1::class.java)
-        startActivity(intent)
+        var view1= this.findViewById<ConstraintLayout>(R.id.view1)
+        var view2= this.findViewById<ConstraintLayout>(R.id.view2)
+        var titletext=this.findViewById<TextView>(R.id.textView5)
+        var titletext1=this.findViewById<TextView>(R.id.textView8)
+        var titletext2=this.findViewById<TextView>(R.id.textView10)
+        view1.setVisibility(View.INVISIBLE)
+        view2.setVisibility(View.VISIBLE)
+        titletext.setVisibility(View.INVISIBLE)
+        titletext1.setVisibility(View.VISIBLE)
+        titletext2.setVisibility(View.VISIBLE)
     }
 
-
-
-//    private fun str2arr(str: String): Array<String> {
-////        var tmp = str.trim().split("\n")
-////        var results = arrayOf("", "", "")
-////        for(i in 0..2){
-////            val temp = tmp[i].split(":")
-////            val toProb: Float = (temp[1].toFloat() * 10000).roundToInt() / 100f
-////            results[i] = temp[0] + ":  " + toProb.toString()+"%"
-////        }
-////        return results
-////    }
+    private fun pageresult(name: String?, engname:String?){
+        val intent = Intent(this, ResultActivity2::class.java)
+        intent.putExtra("name",name)
+        intent.putExtra("engname", engname)
+        startActivity(intent)
+    }
 
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context="cnu.rocket.prupru.ResultActivity3">
+    tools:context="cnu.rocket.prupru.ResultActivity2">
 
     <ImageButton
         android:id="@+id/Img_home"
@@ -28,12 +28,10 @@
     <TextView
         android:id="@+id/txt_result"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
         android:layout_marginTop="85dp"
         android:layout_marginEnd="219dp"
-        android:layout_marginRight="219dp"
         android:layout_marginBottom="525dp"
         android:width="96dp"
         android:height="30dp"
@@ -47,17 +45,15 @@
 
     <TextView
         android:id="@+id/txt_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginLeft="9dp"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="161dp"
-        android:layout_marginRight="161dp"
         android:layout_marginBottom="525dp"
         android:width="49dp"
         android:height="19dp"
         android:text="TextView"
+        android:textColor="#ABABAB"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,14 +61,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/Img_capture"
+        android:id="@+id/Img_img"
         android:layout_width="177.78dp"
         android:layout_height="100dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginLeft="34dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="150dp"
-        android:layout_marginEnd="147dp"
-        android:layout_marginRight="147dp"
+        android:layout_marginEnd="200dp"
         android:layout_marginBottom="389dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,35 +75,19 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/Img_img"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginLeft="13dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginRight="34dp"
-        android:layout_marginBottom="390dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Img_capture"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
         android:id="@+id/Img_mark"
         android:layout_width="40dp"
         android:layout_height="39dp"
         android:layout_marginStart="77dp"
-        android:layout_marginLeft="77dp"
-        android:layout_marginTop="81dp"
+        android:layout_marginTop="146dp"
         android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="35dp"
         app:layout_constraintBottom_toTopOf="@+id/Img_img"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/txt_value"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.337"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -152,18 +130,18 @@
         android:layout_width="wrap_content"
         android:layout_height="19dp"
         android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
         android:layout_marginTop="380dp"
         android:layout_marginEnd="64dp"
-        android:layout_marginRight="64dp"
         android:layout_marginBottom="193dp"
         android:width="232dp"
         android:height="67dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517" />
 
     <ImageButton
         android:id="@+id/btn_camera"
