@@ -1,0 +1,49 @@
+body {
+  text-align: center;
+}
+
+img {
+  margin-top: 3%;
+}
+
+.container {
+  width: 55%;
+  display: inline-block;
+  margin-top: 1%;
+}
+
+/* 전체 table */
+.tableWrite {
+  display: inline;
+}
+
+.tableWrite .tablename {
+  margin-bottom: 0;
+}
+
+.tableWrite .tablehead {
+  text-align: center;
+  font-weight: bold;
+}
+
+.tableWrite .tabledata {
+  background: #ffffff;
+  text-align: center;
+}
+/* 
+.tableWrite th {
+  padding: 3px;
+} */
+.tableWrite .tabledata .input {
+  /* height: 30px; */
+  padding: 5px;
+}
+
+.input .inputcontent {
+  width: 400px;
+}
+
+.submitbtn {
+  float: right;
+  margin-top: 10px !important;
+}
