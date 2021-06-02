@@ -21,7 +21,7 @@ export default () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    const attachmentRef = storageService.ref().child(`trashcan/${uuidv4()}`); // make ref of file
+    const attachmentRef = storageService.ref().child(`database/${uuidv4()}`); // make ref of file
     const response = await attachmentRef.putString(attachment, "data_url");
     console.log(response);
     const attachmentUrl = await response.ref.getDownloadURL();
@@ -32,7 +32,7 @@ export default () => {
       solution,
       attachmentUrl,
     };
-    await dbService.collection("trashcan").add(trash);
+    await dbService.collection("database").add(trash);
 
     setTrashname("");
     setSolution("");
