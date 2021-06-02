@@ -43,7 +43,7 @@ class ResultActivity : AppCompatActivity() {
         if(intent.hasExtra("result")){
             var result_array= intent.getStringExtra("result")?.let { str2arr(it) }
 
-            val EngtoKoMap = mapOf("battery" to "배터리", "glass" to "유리", "metal" to "캔류", "paper" to "종이", "plastic" to "플라스틱")
+            val EngtoKoMap = mapOf("battery" to "폐건전지", "glass" to "유리", "metal" to "캔", "paper" to "종이", "plastic" to "플라스틱")
 
             var result_1= this.findViewById<Button>(R.id.result_1)
             var result_2= this.findViewById<Button>(R.id.result_2)
@@ -116,5 +116,7 @@ class ResultActivity : AppCompatActivity() {
         intent.putExtra("engname", engname)
         startActivity(intent)
     }
+
+
 
 }
