@@ -52,7 +52,6 @@
                 android:width="49dp"
                 android:height="19dp"
                 android:autoSizeTextType="uniform"
-                android:text="TextView"
                 android:textColor="#ABABAB"
                 android:textSize="16sp" />
 
@@ -130,12 +129,12 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="136dp"
             android:layout_marginEnd="137dp"
             android:layout_marginBottom="37dp"
-            android:text="다시분리수거"
-            android:layout_gravity="center"
             android:layout_weight="0.5"
+            android:text="분리수거"
             android:textColor="#14D2A5" />
     </LinearLayout>
 
