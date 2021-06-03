@@ -7,175 +7,136 @@
     android:background="#FFFFFF"
     tools:context="cnu.rocket.prupru.ResultActivity2">
 
-    <ImageButton
-        android:id="@+id/Img_home"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="317dp"
-        android:layout_marginBottom="597dp"
-        android:background="#03FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19"
-        app:srcCompat="@drawable/home" />
-
-    <ImageView
-        android:id="@+id/Img_img"
-        android:layout_width="177.78dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_recycle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_way"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/txt_way"
-        android:layout_width="280dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="60dp"
-        android:width="232dp"
-        android:height="67dp"
-        android:autoSizeMaxTextSize="20sp"
-        android:autoSizeMinTextSize="16sp"
-        android:autoSizeStepGranularity="2sp"
-        android:autoSizeTextType="uniform"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_camera"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_middle" />
-
-    <TextView
-        android:id="@+id/txt_recycle"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="188dp"
-        android:layout_marginBottom="8dp"
-        android:width="115dp"
-        android:height="21dp"
-        android:text="🌱 재활용:"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txt_middle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Img_img" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginEnd="137dp"
-        android:layout_marginBottom="37dp"
-        android:text="다시분리수거"
-        android:textColor="#14D2A5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_camera" />
-
-    <TextView
-        android:id="@+id/txt_middle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="188dp"
-        android:layout_marginBottom="5dp"
-        android:width="127dp"
-        android:height="21dp"
-        android:text="🌱 분리배출 방법"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txt_way"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_recycle" />
-
-    <ImageButton
-        android:id="@+id/btn_camera"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="155dp"
-        android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_way"
-        app:srcCompat="@drawable/camerbutton" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="500dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/Img_img"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:weightSum="11"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/Img_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="26dp"
+            android:layout_weight="1"
+            android:background="#03FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/home" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_result"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="35dp"
+                android:width="96dp"
+                android:height="30dp"
+                android:autoSizeTextType="uniform"
+                android:text="TextView"
+                android:textColor="#14D2A5"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_value"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="22dp"
+                android:width="49dp"
+                android:height="19dp"
+                android:autoSizeTextType="uniform"
+                android:text="TextView"
+                android:textColor="#ABABAB"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/Img_mark"
+                android:layout_width="40dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="44dp"
+                android:layout_marginBottom="35dp"
+                tools:srcCompat="@tools:sample/avatars" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/Img_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/txt_result"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="35dp"
-            android:width="96dp"
-            android:height="30dp"
-            android:autoSizeTextType="uniform"
-            android:text="TextView"
-            android:textColor="#14D2A5"
-            android:textSize="26sp"
+            android:id="@+id/txt_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:width="115dp"
+            android:height="21dp"
+            android:paddingLeft="45dp"
+            android:paddingTop="20dp"
+            android:text="🌱 재활용:"
+            android:textColor="#000000"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/txt_value"
-            android:layout_width="wrap_content"
-            android:layout_height="25dp"
-            android:layout_marginTop="22dp"
-            android:width="49dp"
-            android:height="19dp"
-            android:autoSizeTextType="uniform"
-            android:text="TextView"
-            android:textColor="#ABABAB"
-            android:textSize="16sp" />
+            android:id="@+id/txt_middle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:width="127dp"
+            android:paddingLeft="45dp"
+            android:paddingTop="15dp"
+            android:text="🌱 분리배출 방법"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/Img_mark"
-            android:layout_width="40dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="44dp"
-            android:layout_marginBottom="35dp"
-            tools:srcCompat="@tools:sample/avatars" />
+        <TextView
+            android:id="@+id/txt_way"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:width="232dp"
+            android:height="67dp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeMinTextSize="16sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
+            android:paddingLeft="45dp"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/btn_camera"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_weight="0.5"
+            android:background="#00FFFFFF"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/camerbutton" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:layout_marginEnd="137dp"
+            android:layout_marginBottom="37dp"
+            android:text="다시분리수거"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:textColor="#14D2A5" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

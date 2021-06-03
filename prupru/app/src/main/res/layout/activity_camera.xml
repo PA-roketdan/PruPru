@@ -7,106 +7,96 @@
     android:background="#FFFFFF"
     tools:context="cnu.rocket.prupru.CameraActivity">
 
-    <ImageButton
-        android:id="@+id/Img_home"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="317dp"
-        android:layout_marginBottom="597dp"
-        android:background="#03FFFFFF"
-        android:scaleType="fitCenter"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19"
-        app:srcCompat="@drawable/home" />
+        app:layout_constraintVertical_bias="1.0">
 
-    <ImageView
-        android:id="@+id/Img_trash"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="217dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_subtitle"
-        app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@tools:sample/avatars" />
+        <ImageButton
+            android:id="@+id/Img_home"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="26dp"
+            android:layout_weight="1"
+            android:background="#03FFFFFF"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/home" />
 
-    <ImageButton
-        android:id="@+id/btn_recaptrue"
-        android:layout_width="108dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="197dp"
-        android:layout_marginBottom="153dp"
-        android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.806"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Img_trash"
-        app:srcCompat="@drawable/recapture" />
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="80dp"
+            android:layout_weight="1"
+            android:text="분류 버튼을 눌러\n분리수거를 해주세요."
+            android:textColor="#14D2A5"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-    <ImageButton
-        android:id="@+id/btnSend"
-        android:layout_width="108dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="88dp"
-        android:layout_marginBottom="153dp"
-        android:background="#03FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_recaptrue"
-        app:layout_constraintTop_toBottomOf="@+id/Img_trash"
-        app:srcCompat="@drawable/recycle" />
+        <TextView
+            android:id="@+id/txt_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="80dp"
+            android:layout_weight="1"
+            android:text="분리수거를 원하는 물건을 촬영 후,\n하단의 분리수거 버튼을 눌러주세요."
+            android:textColor="#C1C1C1"
+            android:textSize="12sp" />
 
-    <TextView
-        android:id="@+id/txt_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="91dp"
-        android:layout_marginBottom="504dp"
-        android:text="분류 버튼을 눌러\n분리수거를 해주세요."
-        android:textColor="#14D2A5"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.412"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.506" />
+        <ImageView
+            android:id="@+id/Img_trash"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            tools:srcCompat="@tools:sample/avatars" />
 
-    <TextView
-        android:id="@+id/txt_subtitle"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="137dp"
-        android:layout_marginBottom="496dp"
-        android:text="분리수거를 원하는 물건을 촬영 후,\n하단의 분리수거 버튼을 눌러주세요."
-        android:textColor="#C1C1C1"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.896"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <ImageButton
+                android:id="@+id/btnSend"
+                android:layout_width="108dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginBottom="36dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.15"
+                app:srcCompat="@drawable/recycle" />
+
+            <ImageButton
+                android:id="@+id/btn_recaptrue"
+                android:layout_width="108dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="36dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.15"
+                app:srcCompat="@drawable/recapture" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
