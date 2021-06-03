@@ -8,30 +8,137 @@
     tools:context="cnu.rocket.prupru.ResultActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/view1"
+        android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="550dp"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteY="550dp">
+
+        <Button
+            android:id="@+id/button_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="89dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="200dp"
+            android:background="@drawable/button_background_2"
+            android:text="있음"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button_no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="200dp"
+            android:background="@drawable/button_background_2"
+            android:text="없음"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_yes"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/img_trash">
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="246dp"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/img_home"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="24dp"
+                android:background="#03FFFFFF"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/home" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="172dp"
+                android:layout_marginBottom="4dp"
+                android:text="Q. 투명인가요?"
+                android:textColor="#14D2A5"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="116dp"
+                android:layout_marginEnd="120dp"
+                android:text="플라스틱"
+                android:textColor="#747474"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="5dp"
+                android:text="결과 품목을 선택해\n분리수거 방법을 확인하세요."
+                android:textColor="#14D2A5 "
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/img_trash"
+            android:layout_width="421dp"
+            android:layout_height="230dp"
+            android:layout_weight="3"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="357dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/result_1"
                 android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="46dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="75dp"
                 android:background="@drawable/button_background_2"
                 android:gravity="center"
@@ -81,144 +188,6 @@
                 android:textSize="12sp" />
 
         </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/view3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="550dp"
-        app:layout_constraintBottom_toBottomOf="@id/img_trash"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp">
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="172dp"
-            android:layout_marginBottom="4dp"
-            android:text="Q. 투명인가요?"
-            android:textColor="#14D2A5"
-            android:textSize="26sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="120dp"
-            android:text="플라스틱"
-            android:textColor="#747474"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="126dp"
-            android:layout_marginBottom="40dp"
-            android:text="결과 품목을 선택해\n분리수거 방법을 확인하세요."
-            android:textColor="#14D2A5 "
-            android:textSize="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/view2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="550dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/img_trash">
-
-        <Button
-            android:id="@+id/button_yes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="89dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="200dp"
-            android:background="@drawable/button_background_2"
-            android:text="있음"
-            android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button_no"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/button_no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="84dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginBottom="200dp"
-            android:background="@drawable/button_background_2"
-            android:text="없음"
-            android:textColor="#000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/button_yes"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageButton
-        android:id="@+id/img_home"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="317dp"
-        android:layout_marginBottom="597dp"
-        android:background="#03FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19"
-        app:srcCompat="@drawable/home" />
-
-    <ImageView
-        android:id="@+id/img_trash"
-        android:layout_width="230dp"
-        android:layout_height="230dp"
-        android:layout_marginStart="105dp"
-        android:layout_marginEnd="105dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toTopOf="@+id/view1"
-        app:layout_constraintEnd_toEndOf="@id/view1"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view3"
-        tools:srcCompat="@tools:sample/avatars" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -98,12 +98,12 @@ class ResultActivity : AppCompatActivity() {
     }
 
     private fun pagechange(){
-        var view1= this.findViewById<ConstraintLayout>(R.id.view1)
+//        var view1= this.findViewById<ConstraintLayout>(R.id.view1)
         var view2= this.findViewById<ConstraintLayout>(R.id.view2)
         var titletext=this.findViewById<TextView>(R.id.textView5)
         var titletext1=this.findViewById<TextView>(R.id.textView8)
         var titletext2=this.findViewById<TextView>(R.id.textView10)
-        view1.setVisibility(View.INVISIBLE)
+//        view1.setVisibility(View.INVISIBLE)
         view2.setVisibility(View.VISIBLE)
         titletext.setVisibility(View.INVISIBLE)
         titletext1.setVisibility(View.VISIBLE)
