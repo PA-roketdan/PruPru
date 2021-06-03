@@ -4,10 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import kotlin.math.roundToInt
 
@@ -98,16 +95,26 @@ class ResultActivity : AppCompatActivity() {
     }
 
     private fun pagechange(){
-//        var view1= this.findViewById<ConstraintLayout>(R.id.view1)
+        var view1= this.findViewById<LinearLayout>(R.id.view1)
         var view2= this.findViewById<ConstraintLayout>(R.id.view2)
         var titletext=this.findViewById<TextView>(R.id.textView5)
         var titletext1=this.findViewById<TextView>(R.id.textView8)
         var titletext2=this.findViewById<TextView>(R.id.textView10)
-//        view1.setVisibility(View.INVISIBLE)
+        view1.setVisibility(View.INVISIBLE)
         view2.setVisibility(View.VISIBLE)
         titletext.setVisibility(View.INVISIBLE)
         titletext1.setVisibility(View.VISIBLE)
         titletext2.setVisibility(View.VISIBLE)
+
+        var button_yes=this.findViewById<Button>(R.id.button_yes)
+        var button_no=this.findViewById<Button>(R.id.button_no)
+
+        button_yes.setOnClickListener {
+            pageresult("투명 플라스틱","pet")
+        }
+        button_no.setOnClickListener {
+            pageresult("플라스틱","plastic")
+        }
     }
 
     private fun pageresult(name: String?, engname:String?){
