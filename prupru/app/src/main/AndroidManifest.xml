@@ -22,7 +22,7 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".SettingActivity" />
         <activity android:name=".ResultActivity" />
-        <activity android:name=".SearchActivity" />
+        <activity android:name=".SearchActivity" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".ResultActivity2" />
 
         <meta-data
