@@ -27,7 +27,7 @@ class CameraActivity : AppCompatActivity() {
         pictureIntent()
 
         var btnSend=this.findViewById<ImageButton>(R.id.btnSend)
-        btnSend.setOnClickListener { // send 버튼 누르면 서버로 보내기
+        btnSend.setOnClickListener { // send image to server
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
                 var imgName: String? = uploadImage2Server()
             }
@@ -75,6 +75,7 @@ class CameraActivity : AppCompatActivity() {
         var data = this.image as Bitmap
         data.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
         var byteArray = byteArrayOutputStream.toByteArray()
+        Toast.makeText(applicationContext, "분리수거 중... ♻", Toast.LENGTH_LONG).show()
 
         // upload file
         var imgName: String? = upload(byteArray)
