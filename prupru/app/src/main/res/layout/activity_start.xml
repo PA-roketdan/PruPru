@@ -120,10 +120,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="261dp"
-        android:layout_height="112dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="219dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toTopOf="@+id/Email"
@@ -131,7 +131,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo_img" />
 
     <TextView
         android:id="@+id/copyright"
