@@ -1,8 +1,8 @@
 package cnu.rocket.prupru
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,34 +12,37 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_search.*
 import kotlinx.android.synthetic.main.item.view.*
 
-class SearchActivity : AppCompatActivity() {
+
+class SearchFragment : Fragment() {
     var db : FirebaseFirestore? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_search)
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val view: View = inflater!!.inflate(R.layout.fragment_search, container, false)
 
         db = FirebaseFirestore.getInstance()
 
+        var recyclerview=view.findViewById<RecyclerView>(R.id.recyclerview)
         recyclerview.adapter = RecyclerViewAdapter()
-        recyclerview.layoutManager = LinearLayoutManager(this)
+        recyclerview.layoutManager = LinearLayoutManager(getActivity())
 
-        var Img_home= this.findViewById<ImageButton>(R.id.Img_home)
-        Img_home.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-        var txt_searchinput:EditText = this.findViewById<EditText>(R.id.txt_searchinput)
 
-        var searchButton= this.findViewById<ImageButton>(R.id.searchButton)
+        var txt_searchinput: EditText = view.findViewById<EditText>(R.id.txt_input_search)
+
+        var searchButton= view.findViewById<ImageButton>(R.id.button_search)
 
         searchButton.setOnClickListener {
-            (recyclerview.adapter as RecyclerViewAdapter).search(txt_searchinput.text.toString())
+            (recyclerview.adapter as SearchFragment.RecyclerViewAdapter).search(txt_searchinput.text.toString())
             txt_searchinput.setText("")
         }
+        return view
 
+        return inflater.inflate(R.layout.fragment_search, container, false)
     }
 
     inner class RecyclerViewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -108,5 +111,4 @@ class SearchActivity : AppCompatActivity() {
             }
         }
     }
-
 }

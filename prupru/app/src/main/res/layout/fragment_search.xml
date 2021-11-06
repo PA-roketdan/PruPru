@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SearchFragment">
+
+    <View
+        android:id="@+id/searchview"
+        android:layout_width="wrap_content"
+        android:layout_height="217dp"
+        android:background="#14D2A5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="89dp"
+        android:text="검색"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/searchview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="쓰레기를 검색해 올바른 분리배출 방법을 찾아요."
+        android:textColor="#E4FFF9"
+        android:textFontWeight="500"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/txt6"
+        app:layout_constraintTop_toBottomOf="@+id/txt6" />
+
+    <EditText
+        android:id="@+id/txt_input_search"
+        android:layout_width="354dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/button_background_2"
+        android:elevation="6dp"
+        android:hint="      어떤 쓰레기를 버리시나요?"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="#BEBEBE"
+        android:textFontWeight="700"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt7" />
+
+    <ImageButton
+        android:id="@+id/button_search"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="#03FFFFFF"
+        android:scaleType="fitCenter"
+        android:elevation="6dp"
+        android:src="@drawable/search_icon"
+        app:layout_constraintEnd_toEndOf="@+id/txt_input_search"
+        app:layout_constraintTop_toTopOf="@+id/txt_input_search"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="409dp"
+        android:layout_height="431dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

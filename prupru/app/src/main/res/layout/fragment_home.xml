@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F5F8"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="89dp"
+        android:text="000 님,"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="11dp"
+        android:text="오늘도 올바른 분리배출로 지구를 구해주세요!"
+        android:textColor="@color/black"
+        android:textFontWeight="500"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txt1"
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+    <View
+        android:id="@+id/view_reward"
+        android:layout_width="330dp"
+        android:layout_height="246dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_background"
+        android:elevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt2" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="63dp"
+        android:text="분리배출 현황"
+        android:elevation="8dp"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/view_reward"
+        app:layout_constraintTop_toTopOf="@+id/view_reward" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="15dp"
+        android:text="리워드"
+        android:elevation="8dp"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/view_reward"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/txt_reward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="169dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:text="0"
+        android:elevation="8dp"
+        android:textColor="@color/white"
+        android:textFontWeight="400"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/view_reward"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <View
+        android:id="@+id/view_change"
+        android:layout_width="330dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="36dp"
+        android:elevation="6dp"
+        android:background="@drawable/button_background_2"
+        app:layout_constraintStart_toStartOf="@+id/view_reward"
+        app:layout_constraintTop_toBottomOf="@+id/view_reward" />
+
+    <ImageView
+        android:id="@+id/image_check"
+        android:layout_width="36sp"
+        android:layout_height="36sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="31dp"
+        android:elevation="6dp"
+        android:src="@android:drawable/checkbox_on_background"
+        app:layout_constraintStart_toStartOf="@+id/view_change"
+        app:layout_constraintTop_toTopOf="@+id/view_change" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="리워드 교환"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="24sp"
+        android:elevation="6dp"
+        app:layout_constraintStart_toStartOf="@+id/image_check"
+        app:layout_constraintTop_toBottomOf="@+id/image_check" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="향후 지원 예정"
+        android:textColor="#565656"
+        android:elevation="6dp"
+        android:textFontWeight="400"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
