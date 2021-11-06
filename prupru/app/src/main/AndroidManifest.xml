@@ -20,9 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SettingActivity" />
         <activity android:name=".ResultActivity" />
-        <activity android:name=".SearchActivity" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".ResultActivity2" />
 
         <meta-data
@@ -46,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CameraActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".StartActivity">
         </activity>
         <activity android:name=".SplashActivity">

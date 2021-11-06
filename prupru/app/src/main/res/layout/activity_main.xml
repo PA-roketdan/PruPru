@@ -1,144 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     tools:context="cnu.rocket.prupru.MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="168dp"
-        android:layout_marginBottom="504dp"
-        android:text="메뉴를 \n선택해주세요."
-        android:textColor="#14D2A5"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="77dp"
-        android:layout_marginBottom="456dp"
-        android:text="분리수거는 분리수거를,\n사용자 정보 및 설정은 설정 메뉴를 선택하세요."
-        android:textColor="#C1C1C1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.037" />
-
-    <ImageButton
-        android:id="@+id/CameraButton"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="191dp"
-        android:layout_marginBottom="292dp"
-        android:background="#02FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/camerbutton" />
-
-    <TextView
-        android:id="@+id/setting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginBottom="267dp"
-        android:text="설정"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.242"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/SettingButton" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="203dp"
-        android:layout_marginBottom="267dp"
-        android:text="분리수거"
-        android:textColor="#14D2A5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CameraButton" />
-
-    <ImageButton
-        android:id="@+id/SettingButton"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="89dp"
-        android:layout_marginBottom="292dp"
-        android:background="#00FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
-        app:layout_constraintStart_toEndOf="@+id/CameraButton"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.538"
-        app:srcCompat="@drawable/settingbutton" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="267dp"
-        android:text="검색"
-        android:textColor="#14D2A5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/setting"
-        app:layout_constraintTop_toBottomOf="@+id/SearchButton" />
-
-    <ImageButton
-        android:id="@+id/SearchButton"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="292dp"
-        android:background="#FFFFFF"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/SettingButton"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.538"
-        app:srcCompat="@drawable/search_icon" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bvn_main"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="#F8F8F8"
+        app:itemIconTint="@drawable/bottom_icon_color"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/memu_bottom" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

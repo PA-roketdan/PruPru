@@ -10,7 +10,7 @@ import android.widget.ImageButton
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,29 +18,45 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var btnCamera= this.findViewById<ImageButton>(R.id.CameraButton)
-        btnCamera.setOnClickListener {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-                if (checkPersmission()){ // check permission
-                    val intent = Intent(this, CameraActivity::class.java)
-                    startActivity(intent)
-                }else{
-                    requestPermission()
+        var bvn_main=this.findViewById<BottomNavigationView>(R.id.bvn_main)
+
+        bvn_main.run {
+            setOnNavigationItemSelectedListener {
+                when (it.itemId) {
+                    R.id.home -> {
+                        val HomeFragment = HomeFragment()
+                        supportFragmentManager.beginTransaction().replace(R.id.container, HomeFragment).commit()
+                    }
+                    R.id.search -> {
+                        val searchFragment= SearchFragment()
+                        supportFragmentManager.beginTransaction().replace(R.id.container,searchFragment).commit()
+                    }
+                    R.id.setting -> {
+                        val settingFragment=SettingFragment()
+                        supportFragmentManager.beginTransaction().replace(R.id.container,settingFragment).commit()
+                    }
+                    R.id.camera->{
+                        val cameraFragment=CameraFragment()
+                        supportFragmentManager.beginTransaction().replace(R.id.container,cameraFragment).commit()
+                    }
                 }
+                true
             }
+            selectedItemId = R.id.home
         }
 
-        var SettingButton=this.findViewById<ImageButton>(R.id.SettingButton)
-        SettingButton.setOnClickListener {
-            val intent = Intent(this, SettingActivity::class.java)
-            startActivity(intent)
-        }
 
-        var SearchButton=this.findViewById<ImageButton>(R.id.SearchButton)
-        SearchButton.setOnClickListener{
-            val intent=Intent(this,SearchActivity::class.java)
-            startActivity(intent)
-        }
+//            var btnCamera = this.findViewById<ImageButton>(R.id.CameraButton)
+//            btnCamera.setOnClickListener {
+//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                    if (checkPersmission()) { // check permission
+//                        val intent = Intent(this, CameraActivity::class.java)
+//                        startActivity(intent)
+//                    } else {
+//                        requestPermission()
+//                    }
+//                }
+//            }
     }
 
     private val PERMISSIONS_REQUEST_CODE = 1000; // do not change
