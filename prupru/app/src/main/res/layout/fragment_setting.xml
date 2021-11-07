@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="89dp"
+        android:fontFamily="sans-serif-medium"
         android:text="설정"
         android:textColor="@color/white"
         android:textFontWeight="700"
@@ -37,17 +38,17 @@
         android:text="사용자 설정 페이지입니다."
         android:textColor="#E4FFF9"
         android:textFontWeight="500"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/txt3"
         app:layout_constraintTop_toBottomOf="@+id/txt3" />
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/profileview"
         android:layout_width="354dp"
         android:layout_height="113dp"
-        android:layout_marginTop="27dp"
-        android:elevation="2dp"
+        android:layout_marginTop="23dp"
         android:background="@drawable/button_background_2"
+        android:elevation="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt4" />
@@ -63,7 +64,34 @@
         android:textColor="#999999"
         android:textFontWeight="400"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view" />
+        app:layout_constraintBottom_toBottomOf="@+id/profileview"
+        app:layout_constraintEnd_toEndOf="@+id/profileview"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <View
+        android:id="@+id/imgview"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/shape_circle"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="@+id/profileview"
+        app:layout_constraintTop_toTopOf="@+id/profileview" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:elevation="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="UserId"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/imgview"
+        app:layout_constraintTop_toTopOf="@+id/profileview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,7 @@
         android:layout_gravity="bottom"
         android:background="#F8F8F8"
         app:itemIconTint="@drawable/bottom_icon_color"
+        app:itemIconSize="30dp"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/memu_bottom" />
 

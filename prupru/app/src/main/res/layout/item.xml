@@ -7,10 +7,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/rootView"
-        android:layout_width="match_parent"
+        android:layout_width="354dp"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="5dp"
+        android:background="#DD6B6B6B"
+        app:cardCornerRadius="0dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,9 +18,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/height"
-            android:layout_width="match_parent"
+            android:layout_width="354dp"
             android:layout_height="49dp"
-            android:layout_marginTop="2dp"
             android:background="#FFFFFF">
 
             <TextView
@@ -28,17 +27,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="309dp"
                 android:foregroundGravity="center"
                 android:gravity="center"
                 android:text="쓰레기"
                 android:textColor="#3E3E3E"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintHorizontal_bias="0.168"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.47" />
 
             <TextView
                 android:id="@+id/no"
