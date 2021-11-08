@@ -8,7 +8,7 @@
     tools:context=".HomeFragment">
 
     <TextView
-        android:id="@+id/txt1"
+        android:id="@+id/txt_uid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="39dp"
@@ -32,8 +32,8 @@
         android:textColor="@color/black"
         android:textFontWeight="500"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/txt1"
-        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+        app:layout_constraintStart_toStartOf="@+id/txt_uid"
+        app:layout_constraintTop_toBottomOf="@+id/txt_uid" />
 
     <View
         android:id="@+id/view_reward"

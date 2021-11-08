@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
 import com.facebook.CallbackManager
@@ -46,11 +47,42 @@ class StartActivity : AppCompatActivity() {
         val keyHash = Utility.getKeyHash(this)
         Log.d("Hash", keyHash)
 
-        val intent= Intent(this, MainActivity::class.java)
-
         var SignButton= this.findViewById<Button>(R.id.SignButton)
         SignButton.setOnClickListener {
-            startActivity(intent)
+            var id=this.findViewById<EditText>(R.id.id_email)
+            var pwd=this.findViewById<EditText>(R.id.id_pwd)
+
+            var id_str=id.getText().toString().trim();
+            var pwd_str=pwd.getText().toString().trim();
+
+            if(id_str=="" || pwd_str==""){
+                Toast.makeText(applicationContext,"email이나 password를 입력해주세요",Toast.LENGTH_SHORT).show()
+            }else{
+                FirebaseAuth
+                    .getInstance()
+                    .signInWithEmailAndPassword(id_str,pwd_str)
+                    .addOnCompleteListener(this){task->
+                        if(task.isSuccessful){
+                            Toast.makeText(applicationContext,"로그인 성공",Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                        } else{
+                            FirebaseAuth
+                                .getInstance()
+                                .createUserWithEmailAndPassword(id_str,pwd_str)
+                                .addOnCompleteListener(this){task ->
+                                    if(task.isSuccessful){
+                                        Toast.makeText(applicationContext,"회원가입 성공",Toast.LENGTH_SHORT).show()
+                                        val intent = Intent(this, MainActivity::class.java)
+                                        startActivity(intent)
+                                    }
+                                    else{
+                                        Toast.makeText(applicationContext,"email이나 password를 확인해주세요",Toast.LENGTH_SHORT).show()
+                                    }
+                                }
+                        }
+                    }
+            }
         }
 
         // 로그인 공통 callback 구성

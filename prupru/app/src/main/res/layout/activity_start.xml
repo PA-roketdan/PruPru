@@ -8,7 +8,7 @@
     tools:context="cnu.rocket.prupru.StartActivity">
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/id_email"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginStart="57dp"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/id_pwd"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_marginStart="57dp"
@@ -48,7 +48,7 @@
         app:layout_constraintBottom_toTopOf="@+id/SignButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email" />
+        app:layout_constraintTop_toBottomOf="@+id/id_email" />
 
     <Button
         android:id="@+id/SignButton"
@@ -63,9 +63,9 @@
         android:text="로그인 및 회원가입"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/facebook_login_button"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/id_pwd"
+        app:layout_constraintStart_toStartOf="@+id/id_pwd"
+        app:layout_constraintTop_toBottomOf="@+id/id_pwd" />
 
     <com.shobhitpuri.custombuttons.GoogleSignInButton
         android:id="@+id/google_login_button"
@@ -123,7 +123,7 @@
         android:layout_marginTop="150dp"
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/Email"
+        app:layout_constraintBottom_toTopOf="@+id/id_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
