@@ -79,15 +79,13 @@ class ResultActivity2 : AppCompatActivity() {
         val no2Mark = mapOf("0" to "pet", "1" to "plastic", "2" to "bag", "3" to "metal", "4" to "paper", "5" to "pack", "6" to "glass",
         "7" to "trash", "8" to "garbage", "9" to "battery", "10" to "drug")
 
+        no2Mark[no]?.let {
+            db.collection("mark").document(it).get()
+                .addOnSuccessListener { result2->
+                    var mark_name=result2.data
+                    var url_mark:Uri?=Uri.parse(mark_name?.get("Url").toString())
+                    Glide.with(this).load(url_mark).into(Img_mark)
 
-//
-//        no2Mark[no]?.let {
-//            db.collection("mark").document(it).get()
-//                .addOnSuccessListener { result2->
-//                    var mark_name=result2.data
-//                    var url_mark:Uri?=Uri.parse(mark_name?.get("Url").toString())
-//                    Glide.with(this).load(url_mark).into(Img_mark)
-//
 //                    var value = Integer.parseInt(number)
 //                    if (value in 0..6){
 //                        txt_recycle.append(" 가능")
@@ -96,8 +94,8 @@ class ResultActivity2 : AppCompatActivity() {
 //                    }else{
 //                        txt_recycle.setVisibility(View.INVISIBLE)
 //                    }
-//                }
-//        }
+                }
+        }
 
         var txt_way = this.findViewById<TextView>(R.id.txt_way)
         var temp = solution

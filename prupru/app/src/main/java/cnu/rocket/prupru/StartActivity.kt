@@ -29,6 +29,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.shobhitpuri.custombuttons.GoogleSignInButton
 
@@ -73,6 +74,14 @@ class StartActivity : AppCompatActivity() {
                                 .addOnCompleteListener(this){task ->
                                     if(task.isSuccessful){
                                         Toast.makeText(applicationContext,"회원가입 성공",Toast.LENGTH_SHORT).show()
+                                        
+                                        //회원가입시 reward 0으로 db 저장
+                                        val info= hashMapOf(
+                                            "reward" to 0
+                                        )
+                                        val db = Firebase.firestore
+                                        db.collection("users").document(id_str.split("@").get(0)).set(info)
+
                                         val intent = Intent(this, MainActivity::class.java)
                                         startActivity(intent)
                                     }
