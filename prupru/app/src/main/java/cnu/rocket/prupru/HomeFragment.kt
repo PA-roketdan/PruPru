@@ -30,12 +30,16 @@ class HomeFragment : Fragment() {
             val txt_reward=view.findViewById<TextView>(R.id.txt_reward)
             db.collection("users").document(userid).get()
                 .addOnSuccessListener { result->
-                    var reward_value=result.data
-                    db.collection("users").document(userid).get()
-                        .addOnSuccessListener { result ->
-                            var reward_value = result.data?.get("reward").toString()
-                            txt_reward.setText(reward_value)
-                        }
+                    var user_info=result.data
+                    var reward_value= user_info?.get("reward").toString()
+                    if (user_info==null){ //not email login -> db 저장
+                        reward_value="0"
+                        val info= hashMapOf(
+                            "reward" to 0
+                        )
+                        db.collection("users").document(userid).set(info)
+                    }
+                    txt_reward.setText(reward_value)
                 }
         }
         return view

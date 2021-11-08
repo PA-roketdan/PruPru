@@ -38,6 +38,7 @@ class ResultActivity2 : AppCompatActivity() {
 
         var txt_result=this.findViewById<TextView>(R.id.txt_result)
         var txt_value=this.findViewById<TextView>(R.id.txt_value)
+        var txt_txt=this.findViewById<TextView>(R.id.txt_txt)
 
         var engname:String?=""
         if(intent.hasExtra("name")){
@@ -55,6 +56,7 @@ class ResultActivity2 : AppCompatActivity() {
             var solution = intent.getStringExtra("solution")
             var attachmentUrl = intent.getStringExtra("attachmentUrl")
             txt_result.setText(trashname)
+            txt_txt.setText(trashname+"를 버리는 올바른 방법")
 
             setSearchResult(trashname, no, solution, attachmentUrl)
         }
@@ -79,6 +81,8 @@ class ResultActivity2 : AppCompatActivity() {
         val no2Mark = mapOf("0" to "pet", "1" to "plastic", "2" to "bag", "3" to "metal", "4" to "paper", "5" to "pack", "6" to "glass",
         "7" to "trash", "8" to "garbage", "9" to "battery", "10" to "drug")
 
+        var txt_value=this.findViewById<TextView>(R.id.txt_value)
+        txt_value.setText(no2Mark[no])
         no2Mark[no]?.let {
             db.collection("mark").document(it).get()
                 .addOnSuccessListener { result2->
@@ -128,12 +132,12 @@ class ResultActivity2 : AppCompatActivity() {
 
                     var Img_mark=this.findViewById<ImageView>(R.id.Img_mark)
 
-//                    db.collection("mark").document(engname).get()
-//                        .addOnSuccessListener { result2->
-//                            var mark_name=result2.data
-//                            var url_mark:Uri?=Uri.parse(mark_name?.get("Url").toString())
-//                            Glide.with(this).load(url_mark).into(Img_mark)
-//
+                    db.collection("mark").document(engname).get()
+                        .addOnSuccessListener { result2->
+                            var mark_name=result2.data
+                            var url_mark:Uri?=Uri.parse(mark_name?.get("Url").toString())
+                            Glide.with(this).load(url_mark).into(Img_mark)
+
 //                            var value = Integer.parseInt(number)
 //                            if (value in 0..6){
 //                                txt_recycle.append(" 가능")
@@ -142,7 +146,7 @@ class ResultActivity2 : AppCompatActivity() {
 //                            }else{
 //                                txt_recycle.setVisibility(View.INVISIBLE)
 //                            }
-//                        }
+                        }
 
                     var txt_way=this.findViewById<TextView>(R.id.txt_way)
                     var temp=data?.get("solution").toString()
