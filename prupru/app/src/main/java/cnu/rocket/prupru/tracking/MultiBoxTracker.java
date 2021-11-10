@@ -123,7 +123,7 @@ public class MultiBoxTracker {
     return frameToCanvasMatrix;
   }
 
-  public synchronized void draw(final Canvas canvas) {
+  public synchronized String draw(final Canvas canvas) {
     final boolean rotated = sensorOrientation % 180 == 90;
     final float multiplier =
         Math.min(
@@ -154,7 +154,11 @@ public class MultiBoxTracker {
       // labelString);
       borderedText.drawText(
           canvas, trackedPos.left + cornerSize, trackedPos.top, labelString + "%", boxPaint);
+
+      String temp=recognition.title+" "+String.valueOf((100 * recognition.detectionConfidence));
+      return temp;
     }
+    return null;
   }
 
   private void processResults(final List<Recognition> results) {

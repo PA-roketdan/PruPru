@@ -40,15 +40,18 @@ class ResultActivity2 : AppCompatActivity() {
         var txt_value=this.findViewById<TextView>(R.id.txt_value)
         var txt_txt=this.findViewById<TextView>(R.id.txt_txt)
 
-        var engname:String?=""
-        if(intent.hasExtra("name")){
-            var name=intent.getStringExtra("name")
-            engname=intent.getStringExtra("engname")
-            txt_result.setText(name)
-            txt_value.setText(engname)
+        val EngtoKo = mapOf("battery" to "배터리", "drug" to "알약", "garbage" to "음식물 쓰레기", "glass" to "유리", "metal" to "캔류", "paper" to "종이",
+            "pet" to "페트병", "plastic" to "플라스틱", "trash" to "일반 쓰레기")
 
-            if (engname != null) {
-                getData(engname)
+        var koname:String?=""
+        if(intent.hasExtra("name")){
+            var name= intent.getStringExtra("name")?.trim()
+            println("이름이름:"+name+" "+ EngtoKo[name])
+            koname=EngtoKo[name]
+            txt_result.setText(koname)
+            txt_value.setText(name)
+            if (name != null) {
+                getData(name)
             }
         } else if(intent.hasExtra("trashname")){
             var trashname = intent.getStringExtra("trashname")

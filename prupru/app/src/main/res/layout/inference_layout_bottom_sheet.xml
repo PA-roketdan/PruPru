@@ -44,7 +44,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-black"
-            android:text="class_name"
             android:textColor="@android:color/black"
             android:textSize="30sp" />
 
@@ -54,7 +53,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="right"
-            android:text="00.00 %"
             android:textColor="#6B6B6B"
             android:textSize="24sp" />
 

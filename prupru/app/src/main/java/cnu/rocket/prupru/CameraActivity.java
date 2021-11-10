@@ -19,6 +19,7 @@ package cnu.rocket.prupru;
 import android.Manifest;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.hardware.camera2.CameraAccessException;
@@ -74,6 +75,7 @@ public abstract class CameraActivity extends AppCompatActivity
   private Runnable imageConverter;
 
   private TextView threadsTextView;
+  private TextView class_name, class1_cf;
 
   @Override
   protected void onCreate(final Bundle savedInstanceState) {
@@ -85,6 +87,19 @@ public abstract class CameraActivity extends AppCompatActivity
     Toolbar toolbar = findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
     getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+    class_name=this.findViewById(R.id.class_name);
+    class1_cf=this.findViewById(R.id.class1_cf);
+
+    Intent myIntent = new Intent(this, ResultActivity2.class);
+
+    class_name.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        myIntent.putExtra("name",class_name.getText());
+        startActivity(myIntent);
+      }
+    });
 
     if (hasPermission()) {
       setFragment();
@@ -423,6 +438,14 @@ public abstract class CameraActivity extends AppCompatActivity
   @Override
   public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
     setUseNNAPI(isChecked);
+  }
+
+  protected void showclass(String name) {
+    class_name.setText(name);
+  }
+
+  protected void showcf(String classsf){
+    class1_cf.setText(classsf);
   }
 
   @Override

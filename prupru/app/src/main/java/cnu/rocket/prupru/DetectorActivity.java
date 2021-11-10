@@ -51,7 +51,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
   // Configuration values for the prepackaged SSD model.
   private static final int TF_OD_API_INPUT_SIZE = 300;
   private static final boolean TF_OD_API_IS_QUANTIZED = true;
-  private static final String TF_OD_API_MODEL_FILE = "models/trash_modelv5.tflite";
+  private static final String TF_OD_API_MODEL_FILE = "models/trash_modelv6.tflite";
   private static final String TF_OD_API_LABELS_FILE = "label.txt";
   private static final DetectorMode MODE = DetectorMode.TF_OD_API;
   // Minimum detection confidence to track a detection.
@@ -136,7 +136,12 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
         new DrawCallback() {
           @Override
           public void drawCallback(final Canvas canvas) {
-            tracker.draw(canvas);
+            String temp=tracker.draw(canvas);
+            if(temp!=null){
+              String[] result=temp.split(" ");
+              showclass(result[0]);
+              showcf(result[1]+'%');
+            }
             if (isDebug()) {
               tracker.drawDebug(canvas);
             }
@@ -145,7 +150,6 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
 
     tracker.setFrameConfiguration(previewWidth, previewHeight, sensorOrientation);
   }
-
   @Override
   protected void processImage() {
     ++timestamp;
