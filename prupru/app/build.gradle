@@ -3,7 +3,6 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
-
     id 'com.google.gms.google-services'
 }
 
@@ -27,6 +26,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    aaptOptions {
+        noCompress "tflite"
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -34,11 +36,35 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    lintOptions {
+        abortOnError false
+    }
+    flavorDimensions "tfliteInference"
+    productFlavors {
+        // The TFLite inference is built using the TFLite Java interpreter.
+        interpreter {
+            dimension "tfliteInference"
+        }
+        // Default: The TFLite inference is built using the TFLite Task library (high-level API).
+        taskApi {
+            getIsDefault().set(true)
+            dimension "tfliteInference"
+        }
+    }
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+    interpreterImplementation project(":lib_interpreter")
+    taskApiImplementation project(":lib_task_api")
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.coordinatorlayout:coordinatorlayout:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation "io.grpc:grpc-okhttp:1.32.2"
 
     implementation platform('com.google.firebase:firebase-bom:28.0.1')
     implementation 'com.google.firebase:firebase-analytics-ktx'

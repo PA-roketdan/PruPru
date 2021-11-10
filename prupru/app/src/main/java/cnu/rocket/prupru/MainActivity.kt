@@ -1,6 +1,7 @@
 package cnu.rocket.prupru
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var bvn_main=this.findViewById<BottomNavigationView>(R.id.bvn_main)
-
         bvn_main.run {
             setOnNavigationItemSelectedListener {
                 when (it.itemId) {

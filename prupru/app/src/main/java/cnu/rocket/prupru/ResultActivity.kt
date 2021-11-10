@@ -29,11 +29,11 @@ class ResultActivity : AppCompatActivity() {
 
         if(intent.hasExtra("image_name")){
             var image_name=intent.getStringExtra("image_name")
-            var r: CameraRequest = CameraRequest()
-            var result_img = r.execute(image_name).get() // image bitmap
+//            var r: CameraRequest = CameraRequest()
+//            var result_img = r.execute(image_name).get() // image bitmap
 
             var Img_trash=this.findViewById<ImageView>(R.id.img_trash)
-            Img_trash.setImageBitmap(result_img)
+//            Img_trash.setImageBitmap(result_img)
         }
 
 

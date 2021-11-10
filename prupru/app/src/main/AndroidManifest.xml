@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".CameraActivity"
+            android:exported="false" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".ResultActivity2" />
 
@@ -36,24 +39,25 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".MainActivity" android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".StartActivity">
+        <activity android:name=".DetectorActivity"
+            android:exported="false">
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".StartActivity"></activity>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity >
+        </activity>
         <activity android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
