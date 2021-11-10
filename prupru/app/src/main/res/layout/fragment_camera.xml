@@ -7,6 +7,15 @@
     android:background="@color/white"
     tools:context=".CameraFragment">
 
+    <View
+        android:id="@+id/searchview2"
+        android:layout_width="wrap_content"
+        android:layout_height="217dp"
+        android:background="#14D2A5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/btn_camera"
         android:layout_width="wrap_content"
@@ -20,4 +29,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="89dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="분리배출"
+        android:textColor="#FFFFFF"
+        android:textFontWeight="700"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchview2" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="분리배출하기 버튼을 눌러주세요."
+        android:textColor="#E4FFF9"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 </androidx.constraintlayout.widget.ConstraintLayout>
