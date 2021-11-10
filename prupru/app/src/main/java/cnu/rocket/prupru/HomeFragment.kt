@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
                     if (user_info==null){ //not email login -> db 저장
                         reward_value="0"
                         val info= hashMapOf(
-                            "reward" to 0
+                            "reward" to "0"
                         )
                         db.collection("users").document(userid).set(info)
                     }

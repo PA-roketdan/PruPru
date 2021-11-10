@@ -97,6 +97,7 @@ public abstract class CameraActivity extends AppCompatActivity
       @Override
       public void onClick(View v) {
         myIntent.putExtra("name",class_name.getText());
+        myIntent.putExtra("reward", 1);
         startActivity(myIntent);
       }
     });

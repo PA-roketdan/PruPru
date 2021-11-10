@@ -9,6 +9,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
+import com.google.firebase.auth.ktx.auth
 
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -46,7 +47,18 @@ class ResultActivity2 : AppCompatActivity() {
         var koname:String?=""
         if(intent.hasExtra("name")){
             var name= intent.getStringExtra("name")?.trim()
-            println("이름이름:"+name+" "+ EngtoKo[name])
+            var reward_value=intent.getStringExtra("reward")
+
+            //camera 촬영으로 넘어오면: reward db 저장
+            val db = Firebase.firestore
+            val user = Firebase.auth.currentUser
+            val userid= user?.email?.split("@")?.get(0).toString()
+            var docref=db.collection("users").document(userid)
+                    docref.get().addOnSuccessListener { result ->
+                        var reward_value= result.data?.get("reward")
+                        reward_value=Integer.parseInt(reward_value as String)
+                        docref.update(mapOf("reward" to ((reward_value+1).toString())))
+                }
             koname=EngtoKo[name]
             txt_result.setText(koname)
             txt_value.setText(name)

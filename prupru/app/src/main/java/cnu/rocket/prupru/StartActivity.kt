@@ -77,7 +77,7 @@ class StartActivity : AppCompatActivity() {
                                         
                                         //회원가입시 reward 0으로 db 저장
                                         val info= hashMapOf(
-                                            "reward" to 0
+                                            "reward" to "0"
                                         )
                                         val db = Firebase.firestore
                                         db.collection("users").document(id_str.split("@").get(0)).set(info)
