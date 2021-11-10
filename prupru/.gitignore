@@ -20,3 +20,4 @@ local.properties
 /.gradle/
 /.idea/
 /lib_task_api/build
+/lib_interpreter/build
