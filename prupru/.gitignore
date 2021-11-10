@@ -17,3 +17,5 @@
 .cxx
 local.properties
 /app/src/main/assets/models
+/.gradle/
+/.idea/
