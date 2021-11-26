@@ -1,12 +1,15 @@
 # PRUPRU: 푸릇푸릇
 
-An android application that provides a **guide for waste sorting** using deep learning cameras.
-
-![image](https://user-images.githubusercontent.com/43427380/143508106-19002018-3890-4fea-aadf-5030c56671ce.png)
-
-Check the [***Demo***](https://youtu.be/p2s2YJBEg4w).
+PRUPRU is an android application that provides a **guide for waste sorting ♻** using deep learning cameras.
 
 
+**PRUPRU** will help you recycle properly and further protect the environment. You can easily see **how to throw away or recycle trash** with only your smartphone and PRUPRU.
+
+![image](https://user-images.githubusercontent.com/43427380/143508106-19002018-3890-4fea-aadf-5030c56671ce.png)   
+
+You can check the [***Demo here***](https://youtu.be/p2s2YJBEg4w)!   
+
+<br/>
 
 ## Stacks
 
@@ -14,7 +17,7 @@ Check the [***Demo***](https://youtu.be/p2s2YJBEg4w).
 - Model: Tensorflow, TFLite, Python
 - Database: Firebase
 
-
+<br/>
 
 ## Features
 
@@ -27,13 +30,20 @@ Check the [***Demo***](https://youtu.be/p2s2YJBEg4w).
 
 ![image](https://user-images.githubusercontent.com/43427380/143507619-73b819b4-9f82-4f9d-a7b9-1110ae878941.png)
 
-
+<br/>
 
 ## References
+- Tensorflow Lite example: https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android
+- Trash Dataset: https://github.com/garythung/trashnet
+- 
 
-
+<br/>
 
 ## Contributors
+- Team: PeachAppleRocket🚀
+
 | Sohui Park | Soyeong Kim | Minji Kim |
 |:---:|:---:|:---:|
 | [**@Parksohui**](https://github.com/Parksohui)| [**@kimsoyeong**](https://github.com/kimsoyeong) | [**@kimminji00**](https://github.com/kimminji00) |
+
+ (Chungnam National University Computer Science & Engineering)
