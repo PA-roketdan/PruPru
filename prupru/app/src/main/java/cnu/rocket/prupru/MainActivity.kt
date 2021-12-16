@@ -1,13 +1,16 @@
 package cnu.rocket.prupru
 
 import android.Manifest
-import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import cnu.rocket.prupru.fragments.CameraFragment
+import cnu.rocket.prupru.fragments.HomeFragment
+import cnu.rocket.prupru.fragments.SearchFragment
+import cnu.rocket.prupru.fragments.SettingFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -29,11 +32,11 @@ class MainActivity : AppCompatActivity() {
                         supportFragmentManager.beginTransaction().replace(R.id.container,searchFragment).commit()
                     }
                     R.id.setting -> {
-                        val settingFragment=SettingFragment()
+                        val settingFragment= SettingFragment()
                         supportFragmentManager.beginTransaction().replace(R.id.container,settingFragment).commit()
                     }
                     R.id.camera->{
-                        val cameraFragment=CameraFragment()
+                        val cameraFragment= CameraFragment()
                         supportFragmentManager.beginTransaction().replace(R.id.container,cameraFragment).commit()
                     }
                 }
