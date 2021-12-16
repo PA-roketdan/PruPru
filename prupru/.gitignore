@@ -16,7 +16,6 @@
 .externalNativeBuild
 .cxx
 local.properties
-/app/src/main/assets/models
 /.gradle/
 /.idea/
 /lib_task_api/build
