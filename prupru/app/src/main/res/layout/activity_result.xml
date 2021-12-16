@@ -7,199 +7,164 @@
     android:background="#FFFFFF"
     tools:context="cnu.rocket.prupru.ResultActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="7"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <View
+        android:id="@+id/resultview"
+        android:layout_width="wrap_content"
+        android:layout_height="217dp"
+        android:background="#14D2A5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="89dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="분리배출 방법"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/Img_back"
+        app:layout_constraintTop_toTopOf="@+id/resultview" />
+
+    <TextView
+        android:id="@+id/txt8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="아래 방법을 따라 올바른 분리배출을 해봐요!"
+        android:textColor="#E4FFF9"
+        android:textFontWeight="500"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/txt5"
+        app:layout_constraintTop_toBottomOf="@+id/txt5" />
+
+    <ImageView
+        android:id="@+id/Img_img"
+        android:layout_width="0dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="21dp"
+        android:elevation="2dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/txt8"
+        tools:srcCompat="@tools:sample/avatars" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/view3"
-            android:layout_width="match_parent"
-            android:layout_height="105dp"
-            android:layout_weight="1">
+    <View
+        android:id="@+id/view4"
+        android:layout_width="342dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/result_background"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Img_img" />
 
-            <ImageButton
-                android:id="@+id/img_home"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="26dp"
-                android:layout_marginTop="24dp"
-                android:background="#03FFFFFF"
-                android:scaleType="fitCenter"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/home" />
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="25dp"
+        android:elevation="3dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="45dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="172dp"
-                android:layout_marginBottom="4dp"
-                android:text="Q. 투명인가요?"
-                android:textColor="#14D2A5"
-                android:textSize="26sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView10"
-                app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/txt_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:elevation="3dp"
+        android:textColor="#14D2A5"
+        android:textFontWeight="500"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_result"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="45dp"
-                android:layout_marginTop="84dp"
-                android:layout_marginEnd="120dp"
-                android:text="플라스틱"
-                android:textColor="#747474"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/Img_mark"
+        android:layout_width="52dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintStart_toEndOf="@+id/txt_result"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        tools:srcCompat="@tools:sample/avatars" />
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="52dp"
-                android:text="결과 품목을 선택해\n분리수거 방법을 확인하세요."
-                android:textColor="#14D2A5 "
-                android:textSize="24dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_home" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="이렇게 버려요!"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
 
-        <ImageView
-            android:id="@+id/img_trash"
-            android:layout_width="421dp"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            tools:srcCompat="@tools:sample/avatars" />
+    <TextView
+        android:id="@+id/txt_way"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="25dp"
+        android:autoSizeTextType="uniform"
+        android:textColor="#6F6F6F"
+        android:textFontWeight="400"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_line"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.093" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/view_parent"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="4">
+    <ImageButton
+        android:id="@+id/Img_back"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#14D2A5"
+        app:layout_constraintStart_toStartOf="@+id/resultview"
+        app:layout_constraintTop_toTopOf="@+id/resultview"
+        app:srcCompat="@drawable/img_close"
+        tools:ignore="TouchTargetSizeCheck" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/view2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+    <ImageView
+        android:id="@+id/img_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:srcCompat="@drawable/img_line" />
 
-                <Button
-                    android:id="@+id/button_yes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="89dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="200dp"
-                    android:background="@drawable/button_background_2"
-                    android:text="YES"
-                    android:textColor="#000000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/button_no"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <Button
-                    android:id="@+id/button_no"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="84dp"
-                    android:layout_marginEnd="50dp"
-                    android:layout_marginBottom="200dp"
-                    android:background="@drawable/button_background_2"
-                    android:text="NO"
-                    android:textColor="#000000"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/button_yes"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <LinearLayout
-                android:id="@+id/view1"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <Button
-                    android:id="@+id/result_1"
-                    android:layout_width="290dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="44dp"
-                    android:layout_marginTop="50dp"
-                    android:background="@drawable/button_background_2"
-                    android:gravity="center"
-                    android:text="Button"
-                    android:textColor="#14D2A5"
-                    android:textSize="26sp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/result_2"
-                    android:layout_width="240dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="44dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/button_background_2"
-                    android:gravity="center"
-                    android:text="Button"
-                    android:textColor="#AAAAAA"
-                    android:textSize="18sp" />
-
-                <Button
-                    android:id="@+id/result_3"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="44dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/button_background_2"
-                    android:gravity="center"
-                    android:text="Button"
-                    android:textColor="#AAAAAA"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@+id/result_4"
-                    android:layout_width="102dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="44dp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/button_background_2"
-                    android:gravity="center"
-                    android:text="해당없음"
-                    android:textColor="#AAAAAA"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:elevation="3dp"
+        android:textColor="#80000000"
+        android:textFontWeight="500"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/txt_result"
+        app:layout_constraintTop_toBottomOf="@+id/txt_result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
