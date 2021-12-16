@@ -1,4 +1,4 @@
-package cnu.rocket.prupru
+package cnu.rocket.prupru.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,6 +11,9 @@ import android.widget.ImageButton
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import cnu.rocket.prupru.R
+import cnu.rocket.prupru.ResultActivity
+import cnu.rocket.prupru.Trash
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.item.view.*
 
@@ -37,7 +40,7 @@ class SearchFragment : Fragment() {
         var searchButton= view.findViewById<ImageButton>(R.id.button_search)
 
         searchButton.setOnClickListener {
-            (recyclerview.adapter as SearchFragment.RecyclerViewAdapter).search(txt_searchinput.text.toString())
+            (recyclerview.adapter as RecyclerViewAdapter).search(txt_searchinput.text.toString())
             txt_searchinput.setText("")
         }
         return view
@@ -80,9 +83,9 @@ class SearchFragment : Fragment() {
             viewHolder.solution.text = trashBook[position]?.solution
             viewHolder.attachmentUrl.text = trashBook[position]?.attachmentUrl
 
-            var tmp:Trash = trashBook[position]
+            var tmp: Trash = trashBook[position]
             viewHolder.rootView.setOnClickListener{
-                val intent = Intent(viewHolder.getContext(), ResultActivity2::class.java)
+                val intent = Intent(viewHolder.getContext(), ResultActivity::class.java)
                 intent.putExtra("trashname", tmp.trashname)
                 intent.putExtra("no", tmp.no)
                 intent.putExtra("solution", tmp.solution)
