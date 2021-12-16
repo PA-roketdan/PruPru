@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cnu.rocket.prupru;
+package cnu.rocket.prupru.camera;
 
 import android.Manifest;
 import android.app.Fragment;
@@ -46,6 +46,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import cnu.rocket.prupru.R;
+import cnu.rocket.prupru.ResultActivity;
 import cnu.rocket.prupru.env.ImageUtils;
 import cnu.rocket.prupru.env.Logger;
 
@@ -91,7 +93,7 @@ public abstract class CameraActivity extends AppCompatActivity
     class_name=this.findViewById(R.id.class_name);
     class1_cf=this.findViewById(R.id.class1_cf);
 
-    Intent myIntent = new Intent(this, ResultActivity2.class);
+    Intent myIntent = new Intent(this, ResultActivity.class);
 
     class_name.setOnClickListener(new View.OnClickListener() {
       @Override

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cnu.rocket.prupru;
+package cnu.rocket.prupru.camera;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -31,6 +31,7 @@ import android.util.Size;
 import android.util.TypedValue;
 import android.widget.Toast;
 
+import cnu.rocket.prupru.R;
 import cnu.rocket.prupru.env.BorderedText;
 import cnu.rocket.prupru.env.ImageUtils;
 import cnu.rocket.prupru.env.Logger;

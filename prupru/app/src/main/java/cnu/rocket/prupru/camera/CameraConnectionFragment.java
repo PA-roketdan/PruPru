@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package cnu.rocket.prupru;
+package cnu.rocket.prupru.camera;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -53,6 +53,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import cnu.rocket.prupru.R;
 import cnu.rocket.prupru.customview.AutoFitTextureView;
 import cnu.rocket.prupru.env.Logger;
 
