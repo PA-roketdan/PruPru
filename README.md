@@ -2,6 +2,8 @@
 
 PRUPRU is an android application that provides a **guide for waste sorting ♻** using deep learning cameras.
 
+(now version 2.0)
+
 
 **PRUPRU** will help you recycle properly and further protect the environment. You can easily see **how to throw away or recycle trash** with only your smartphone and PRUPRU.
 
