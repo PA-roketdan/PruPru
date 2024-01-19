@@ -37,7 +37,6 @@ You can check the [***Demo here***](https://youtu.be/p2s2YJBEg4w)!
 ## References
 - Tensorflow Lite example: https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android
 - Trash Dataset: https://github.com/garythung/trashnet
-- 
 
 <br/>
 
